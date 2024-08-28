@@ -1,0 +1,139 @@
+.taskCard {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #e2bfd9;
+
+  .left {
+    flex: 2;
+    .textContainer {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 10px;
+
+      .title {
+        font-size: 25px;
+        font-weight: 900;
+        color: #444;
+        transition: all 0.4s ease;
+
+        &:hover {
+          color: #000;
+          scale: 1.01;
+        }
+      }
+
+      .description {
+        font-size: 14px;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        color: #575454;
+      }
+
+      .bottom {
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+
+        .features {
+          display: flex;
+          gap: 20px;
+          font-size: 14px;
+
+          .feature {
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            color: #575454;
+            font-weight: 600;
+          }
+        }
+      }
+    }
+  }
+  .middle {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    span {
+      &::first-letter {
+        text-transform: uppercase;
+      }
+    }
+    span {
+      background-color: #e4e4e6;
+      padding: 8px;
+      border-radius: 5px;
+      width: max-content;
+    }
+    .high {
+      background-color: #ffa39e;
+    }
+    .medium {
+      background-color: #f7b316;
+    }
+    .low {
+      background-color: #adc6ff;
+    }
+    .created {
+      background-color: #bec5ce;
+    }
+    .in {
+      background-color: #adc6ff;
+    }
+    .completed {
+      background-color: #e78945;
+    }
+    .closed {
+      background-color: #33a069;
+    }
+  }
+  .right {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+    .viewButton {
+      background-color: transparent;
+      width: 50px;
+      height: 50px;
+      img {
+        fill: #adc6ff;
+        height: 25px;
+        width: 25px;
+        object-fit: cover;
+      }
+    }
+
+    .editButton {
+      background-color: transparent;
+      width: 50px;
+      height: 50px;
+      img {
+        fill: #e2bfd9;
+        height: 25px;
+        width: 25px;
+        object-fit: cover;
+      }
+    }
+
+    .deleteButton {
+      background-color: transparent;
+      width: 50px;
+      height: 50px;
+      img {
+        fill: #ffa39e;
+        height: 25px;
+        width: 25px;
+        object-fit: cover;
+      }
+    }
+  }
+}

@@ -1,0 +1,126 @@
+@import "../../../responsive.scss";
+.taskView {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+
+  .modalContainer {
+    max-width: 600px;
+    width: 100%;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    background-color: #ffffff;
+    box-shadow: 0px 0px 18px 0px rgba(0, 0, 0, 0.75);
+    border-radius: 8px;
+
+    @include sm {
+      width: 80%;
+    }
+    .closeBtn {
+      position: fixed;
+      top: 8px;
+      right: 8px;
+      cursor: pointer;
+    }
+    .content {
+      width: 100%;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      .task-title {
+        font-size: 1.5em;
+        margin-bottom: 10px;
+      }
+
+      .task-description {
+        color: #555;
+        margin-bottom: 20px;
+      }
+
+      .task-details {
+        border-top: 2px solid #e2bfd9;
+        padding-top: 10px;
+        width: 100%;
+
+        .detail {
+          margin-bottom: 10px;
+
+          strong {
+            display: block;
+            color: #333;
+          }
+
+          .category {
+            background-color: #e0f7fa;
+            color: #00796b;
+            display: inline-block;
+            padding: 5px;
+            border-radius: 4px;
+          }
+
+          .priority {
+            background-color: #ffebee;
+            color: #c62828;
+            display: inline-block;
+            padding: 5px;
+            border-radius: 4px;
+          }
+
+          .status {
+            background-color: #f1f8e9;
+            color: #558b2f;
+            display: inline-block;
+            padding: 5px;
+            border-radius: 4px;
+          }
+
+          .due-date {
+            background-color: #e8f5e9;
+            color: #2e7d32;
+            display: inline-block;
+            padding: 5px;
+            border-radius: 4px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.btnContainer {
+  display: flex;
+  padding: 1rem 1rem;
+}
+.btnContainer button {
+  width: 100%;
+  margin: 0.5rem;
+  padding: 16px 0;
+  /* border: none; */
+  border: 1px solid #411b57;
+  /* color: #ffffff; */
+}
+
+.btnPrimary {
+  background-color: #411b57;
+  color: white;
+}
+
+.btnOutline {
+  /* background-color: #a76a99; */
+  background-color: white;
+  color: #411b57;
+}
+
+.bold {
+  font-weight: 600;
+}
+
+.errorSpan {
+  color: red;
+  font-size: 15px;
+}

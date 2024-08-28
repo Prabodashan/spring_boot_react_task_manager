@@ -1,0 +1,108 @@
+@import "../../../responsive.scss";
+.taskForm {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+
+  .modalContainer {
+    max-width: 600px;
+    width: 100%;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    background-color: #ffffff;
+    box-shadow: 0px 0px 18px 0px rgba(0, 0, 0, 0.75);
+    border-radius: 8px;
+
+    @include sm {
+      width: 80%;
+    }
+    .closeBtn {
+      position: fixed;
+      top: 8px;
+      right: 8px;
+      cursor: pointer;
+    }
+    .content {
+      width: 100%;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      form {
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        .item {
+          display: flex;
+          flex-direction: column;
+          width: 80%;
+          label {
+            font-size: 14px;
+          }
+          input,
+          select {
+            padding: 15px;
+            border: 1px solid #e0e0e0;
+            border-radius: 5px;
+            font-size: 14px;
+          }
+        }
+        button {
+          width: 80%;
+          padding: 20px;
+          background-color: rgb(92, 184, 92);
+          border-radius: 10px;
+          border: none;
+          color: black;
+          font-weight: bold;
+
+          &:disabled {
+            background-color: #bed9d8;
+            cursor: not-allowed;
+          }
+        }
+      }
+    }
+  }
+}
+
+.btnContainer {
+  display: flex;
+  padding: 1rem 1rem;
+}
+.btnContainer button {
+  width: 100%;
+  margin: 0.5rem;
+  padding: 16px 0;
+  /* border: none; */
+  border: 1px solid #411b57;
+  /* color: #ffffff; */
+}
+
+.btnPrimary {
+  background-color: #411b57;
+  color: white;
+}
+
+.btnOutline {
+  /* background-color: #a76a99; */
+  background-color: white;
+  color: #411b57;
+}
+
+.bold {
+  font-weight: 600;
+}
+
+.errorSpan {
+  color: red;
+  font-size: 15px;
+}

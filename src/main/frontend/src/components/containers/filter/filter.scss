@@ -1,0 +1,64 @@
+@import "../../../responsive.scss";
+
+.filter {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #e2bfd9;
+
+  h1 {
+    font-weight: 300;
+    font-size: 24px;
+  }
+
+  .item {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+
+    label {
+      font-size: 15px;
+      font-weight: bold;
+    }
+
+    input,
+    select {
+      width: 250px;
+      padding: 10px;
+      border: 1px solid #e0e0e0;
+      border-radius: 5px;
+      font-size: 14px;
+
+      @include md {
+        width: 100px;
+      }
+      @include xxs {
+        width: 75px;
+      }
+    }
+
+    button {
+      font-weight: bold;
+      background-color: #e0e0e0;
+    }
+  }
+
+  .top {
+    input {
+      width: 100%;
+    }
+  }
+
+  .bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    flex-wrap: wrap;
+    gap: 20px;
+
+    @include sm {
+      gap: 5px;
+    }
+  }
+}
