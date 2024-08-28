@@ -35,6 +35,7 @@ build/
 
 ### React File ###
 # dependencies
+**/node
 **/node_modules
 **/.pnp
 .pnp.js
