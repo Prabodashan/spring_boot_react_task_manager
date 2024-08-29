@@ -52,7 +52,7 @@ const useAxios = () => {
 
     return () => {
       // Cancel the request when the component unmounts
-      // source.cancel("Component unmounted: Request cancelled.");
+      source.cancel("Component unmounted: Request cancelled.");
     };
   }, []);
 
@@ -82,7 +82,7 @@ const useAxios = () => {
         return;
       }
 
-      if (error.status == 403) {
+      if (error.status === 403) {
         setAuth({});
         navigate(from, { replace: true });
       }

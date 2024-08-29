@@ -1,9 +1,17 @@
+@import "../../../responsive.scss";
+
 .taskCard {
   display: flex;
   justify-content: space-between;
   gap: 20px;
   padding-bottom: 20px;
   border-bottom: 2px solid #e2bfd9;
+
+  @include sm {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 
   .left {
     flex: 2;
@@ -12,6 +20,10 @@
       flex-direction: column;
       justify-content: space-between;
       gap: 10px;
+
+      @include sm {
+        align-items: center;
+      }
 
       .title {
         font-size: 25px;
@@ -59,6 +71,7 @@
     flex: 1;
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 25px;
     span {
       &::first-letter {
@@ -66,7 +79,7 @@
       }
     }
     span {
-      background-color: #e4e4e6;
+      background-color: #3f012c4f;
       padding: 8px;
       border-radius: 5px;
       width: max-content;

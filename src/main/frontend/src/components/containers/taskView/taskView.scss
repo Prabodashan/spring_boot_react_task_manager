@@ -48,7 +48,15 @@
         width: 100%;
 
         .detail {
+          display: flex;
+          gap: 10px;
+          align-items: center;
           margin-bottom: 10px;
+          span {
+            &::first-letter {
+              text-transform: uppercase;
+            }
+          }
 
           strong {
             display: block;

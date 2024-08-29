@@ -285,7 +285,7 @@ const TaskForm = ({
                 </p>
               )}
             </div>
-            <button onClick={handleSubmit} disabled={loading}>
+            <button className="btn" onClick={handleSubmit} disabled={loading}>
               {editTaskId != null ? "Update" : "Create"}
             </button>
           </form>

@@ -44,8 +44,7 @@ const RegisterPage = () => {
   const validate = (values) => {
     const errors = {};
     setError(null);
-    const regexp =
-      /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{4,12}$/;
+
     const regexe = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
     if (!values.email) {
       errors.email = "Email is required!";
@@ -80,7 +79,6 @@ const RegisterPage = () => {
 
     if (!response.status) {
       setError(response.data);
-      return toast.error(response.message);
     }
     const { token, name, userId } = response.data;
     toast.success(response.message);
@@ -142,7 +140,7 @@ const RegisterPage = () => {
             <br />
           </p>
         )}
-        <button onClick={handleSubmit} disabled={loading}>
+        <button className="btn" onClick={handleSubmit} disabled={loading}>
           Register
         </button>
         <Link to="/login">Already you have an account?</Link>

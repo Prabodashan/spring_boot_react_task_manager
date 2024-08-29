@@ -110,7 +110,9 @@ function Filter() {
           />
         </div>
         <div className="item">
-          <button onClick={() => navigate({ search: "" })}>Clear</button>
+          <button className="btn" onClick={() => navigate({ search: "" })}>
+            Clear
+          </button>
         </div>
       </div>
     </div>

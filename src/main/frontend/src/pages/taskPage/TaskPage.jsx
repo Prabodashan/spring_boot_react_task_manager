@@ -70,16 +70,37 @@ const TaskPage = () => {
 
   return (
     <div className="taskPage">
+      {newTaskModal ? (
+        <TaskForm
+          open={newTaskModal}
+          onClose={() => setNewTaskModal(false)}
+          getTask={getTasks}
+          editTaskId={editTaskId}
+          setEditTaskId={setEditTaskId}
+        />
+      ) : (
+        ""
+      )}
+      {viewTaskModal ? (
+        <TaskView
+          open={viewTaskModal}
+          onClose={() => setViewTaskModal(false)}
+          viewTaskId={viewTaskId}
+        />
+      ) : (
+        ""
+      )}
       <div className="wrapper">
         <div className="topWrapper">
           <h1>{auth.name}'s Tasks</h1>
           <button
+            className="btn"
             onClick={() => {
               setEditTaskId(null);
               setNewTaskModal(true);
             }}
           >
-            + New Task
+            + Add Task
           </button>
         </div>
         <Filter />
@@ -101,26 +122,6 @@ const TaskPage = () => {
           <div className="noData">No Tasks</div>
         )}
       </div>
-      {newTaskModal ? (
-        <TaskForm
-          open={newTaskModal}
-          onClose={() => setNewTaskModal(false)}
-          getTask={getTasks}
-          editTaskId={editTaskId}
-          setEditTaskId={setEditTaskId}
-        />
-      ) : (
-        ""
-      )}
-      {viewTaskModal ? (
-        <TaskView
-          open={viewTaskModal}
-          onClose={() => setViewTaskModal(false)}
-          viewTaskId={viewTaskId}
-        />
-      ) : (
-        ""
-      )}
     </div>
   );
 };

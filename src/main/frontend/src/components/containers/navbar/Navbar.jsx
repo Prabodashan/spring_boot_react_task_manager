@@ -1,5 +1,5 @@
 // Inbuilt components and modules
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 // Custom components and modules
 import UseAuth from "../../../hooks/UseAuth";
@@ -23,9 +23,9 @@ function Navbar() {
   return (
     <nav>
       <div className="left">
-        <a href="/" className="logo">
+        <div className="logo">
           <span>Task Manager</span>
-        </a>
+        </div>
       </div>
       <div className="right">
         {auth.userId ? (

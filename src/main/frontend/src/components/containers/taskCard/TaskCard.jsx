@@ -105,7 +105,7 @@ const TaskCard = ({
       </div>
       <div className="right">
         <button
-          className="viewButton"
+          className="btn viewButton"
           onClick={() => {
             setViewTaskId(item.id);
             onOpen();
@@ -114,7 +114,7 @@ const TaskCard = ({
           <img src={View} alt="view" />
         </button>
         <button
-          className="editButton"
+          className="btn editButton"
           onClick={() => {
             setEditTaskId(item.id);
             onEdit();
@@ -122,7 +122,7 @@ const TaskCard = ({
         >
           <img src={Edit} alt="edit" />
         </button>
-        <button className="deleteButton" onClick={handleDelete}>
+        <button className="btn deleteButton" onClick={handleDelete}>
           <img src={Delete} alt="delete" />
         </button>
       </div>
