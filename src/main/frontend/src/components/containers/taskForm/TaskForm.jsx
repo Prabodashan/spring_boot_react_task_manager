@@ -95,8 +95,7 @@ const TaskForm = ({
     });
 
     if (!response?.status) {
-      setError(response.data);
-      return toast.error(response.message);
+      return setError(response.data);
     }
 
     toast.success(response.message);
@@ -288,6 +287,12 @@ const TaskForm = ({
             <button className="btn" onClick={handleSubmit} disabled={loading}>
               {editTaskId != null ? "Update" : "Create"}
             </button>
+
+            <div className="item">
+              <p>
+                <br />
+              </p>
+            </div>
           </form>
         </div>
       </div>

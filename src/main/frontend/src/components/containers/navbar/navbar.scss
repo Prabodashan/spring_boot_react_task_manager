@@ -4,18 +4,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 10px;
-
-  a {
-    transition: all 0.4s ease;
-    @include sm {
-      display: none;
-    }
-
-    &:hover {
-      scale: 1.05;
-    }
-  }
+  padding: 20px 0;
 
   .left {
     flex: 3;
@@ -29,6 +18,10 @@ nav {
       display: flex;
       align-items: center;
       gap: 10px;
+
+      &:hover {
+        cursor: pointer;
+      }
     }
   }
   .right {
@@ -38,22 +31,25 @@ nav {
     justify-content: flex-end;
     height: 100%;
 
-    a {
-      padding: 12px 24px;
-    }
-
     .user {
       display: flex;
+      justify-content: center;
       align-items: center;
       font-weight: bold;
-      gap: 15px;
+      gap: 10px;
+      cursor: pointer;
+
+      img {
+        height: 25px;
+        width: 25px;
+        object-fit: cover;
+      }
 
       .logoutButton {
-        padding: 12px 0 24px 12px;
         font-size: larger;
-        cursor: pointer;
         border: none;
         position: relative;
+        color: #f23327;
       }
     }
   }

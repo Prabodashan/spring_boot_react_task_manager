@@ -14,12 +14,10 @@ services:
       MYSQL_ROOT_USER: root
       MYSQL_ROOT_PASSWORD: root
       MYSQL_DATABASE: task_manager
-      MYSQL_USER: root
-      MYSQL_PASSWORD: root
 
   task-app:
     container_name: task-app
-    image: prabodashan14/taskmanager:v1.0
+    image: prabodashan14/taskmanager:v1.3
     build: .
     ports:
       - "8080:8080"

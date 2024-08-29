@@ -78,7 +78,7 @@ const RegisterPage = () => {
     });
 
     if (!response.status) {
-      setError(response.data);
+      return setError(response.data);
     }
     const { token, name, userId } = response.data;
     toast.success(response.message);

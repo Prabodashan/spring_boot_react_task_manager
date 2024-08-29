@@ -2,10 +2,11 @@
 .taskForm {
   position: fixed;
   width: 100%;
-  height: 100%;
   z-index: 999;
+  height: 100%;
 
   .modalContainer {
+    height: 90%;
     max-width: 600px;
     width: 100%;
     position: fixed;
@@ -22,23 +23,33 @@
     }
     .closeBtn {
       position: fixed;
-      top: 8px;
-      right: 8px;
+      top: 10px;
+      right: 25px;
       cursor: pointer;
     }
     .content {
       width: 100%;
-      padding: 20px;
+      height: 100%;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
+      padding: 20px;
+      overflow-y: scroll;
+      -ms-overflow-style: none; /* Internet Explorer 10+ */
+      scrollbar-width: none; /* Firefox */
+      & {
+        ::-webkit-scrollbar {
+          display: none; /* Safari and Chrome */
+        }
+      }
+
       form {
-        width: 80%;
+        height: 100%;
+        width: 90%;
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: center;
         gap: 20px;
         .item {
           display: flex;

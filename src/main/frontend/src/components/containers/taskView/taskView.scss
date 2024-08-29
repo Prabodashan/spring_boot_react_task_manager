@@ -22,16 +22,27 @@
     }
     .closeBtn {
       position: fixed;
-      top: 8px;
-      right: 8px;
+      top: 10px;
+      right: 15px;
       cursor: pointer;
     }
     .content {
       width: 100%;
+      height: 100%;
       padding: 20px;
       display: flex;
       flex-direction: column;
       align-items: flex-start;
+
+      overflow-y: scroll;
+      -ms-overflow-style: none; /* Internet Explorer 10+ */
+      scrollbar-width: none; /* Firefox */
+      & {
+        ::-webkit-scrollbar {
+          display: none; /* Safari and Chrome */
+        }
+      }
+
       .task-title {
         font-size: 1.5em;
         margin-bottom: 10px;

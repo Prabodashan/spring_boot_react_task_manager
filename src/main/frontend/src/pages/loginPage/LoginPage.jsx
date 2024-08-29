@@ -76,7 +76,6 @@ const LoginPage = () => {
       return toast.error(response.message);
     }
     const { token, name, userId } = response.data;
-    toast.success(response.message);
 
     setAuth({ userId, name, token });
     navigate(from, { replace: true });
